@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Bhoi - Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #191414;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .resume-container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            width: 75%;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1db954;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .header-left h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .header-left p {
+            margin: 5px 0;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right a, .header-right button {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            background-color: #1db954;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header-right a:hover, .header-right button:hover {
+            background-color: #14863e;
+        }
+
+        .header-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .header-icons p {
+            margin: 10px 0;
+        }
+
+        .header-icons i {
+            margin-right: 8px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #1db954;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #1db954;
+            border-bottom: 2px solid #1db954;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .experience h3, .experience h4, .experience h5 {
+            margin: 10px 0;
+            color: #1db954;
+        }
+
+        .experience p, .experience ul {
+            margin-left: 20px;
+        }
+
+        .experience ul {
+            list-style: disc;
+        }
+
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .education-table th, .education-table td {
+            padding: 10px;
+            border: 1px solid #444;
+        }
+
+        .education-table th {
+            background-color: #1db954;
+        }
+
+        .accordion {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin-bottom: 5px;
+            border-radius: 8px;
+        }
+
+        .accordion:hover {
+            background-color: #444;
+        }
+
+        .active, .accordion:active {
+            background-color: #1db954;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #333;
+            overflow: hidden;
+            border-radius: 0 0 8px 8px;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .panel.show {
+            display: block;
+        }
+
+        .media-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .media-controls .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .media-controls button {
+            background: none;
+            border: none;
+            color: #1db954;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s;
+            margin: 0 10px;
+        }
+
+        .media-controls button:hover {
+            color: #14863e;
+        }
+
+        .seekbar {
+            width: 70%;
+            height: 5px;
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .seekbar div {
+            height: 100%;
+            background-color: #1db954;
+            width: 50%;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .volume-control i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .volume-slider {
+            width: 100px;
+            height: 5px;
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .volume-slider div {
+            height: 100%;
+            background-color: #1db954;
+            width: 50%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #999;
+        }
+
+        .highlight {
+            color: #1db954;
+        }
+
+        .icon-play {
+            color: #1db954;
+            margin-right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+                width: 95%;
+            }
+
+            aside, .main-content {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+
+            .header-left, .header-right {
+                text-align: center;
+            }
+
+            .header-left h1 {
+                font-size: 1.5em;
+            }
+
+            .header-icons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .header-icons p {
+                margin: 5px 10px;
+            }
+
+            .seekbar, .volume-slider {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <aside>
+            <img src="https://thumbnail.imgbin.com/0/4/13/imgbin-spotify-logo-streaming-media-podcast-music-stitcher-bDjf2KP2udxNwzHYBqpDsCS0T_t.jpg" alt="Profile Image" class="profile-img">
+            <div class="header-icons">
+                <p><i class="fas fa-map-marker-alt"></i> Ram Nagar, Pimpale Gurav, Pune 411016</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:vishalbhoi7@gmail.com">vishalbhoi7@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+917038675957">+91-7038675957</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vishal-bhoi-220b27151/">linkedin.com/in/vishal-bhoi-220b27151/</a></p>
+            </div>
+            <section class="education section">
+                <h2>EDUCATION</h2>
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Institute</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B.E. E. & Tc. Engineering</td>
+                            <td>Sinhgad College of Engineering, Vadgaon</td>
+                            <td>7.19 (CGPA)</td>
+                        </tr>
+                        <tr>
+                            <td>Diploma in E. & Tc. Engineering</td>
+                            <td>Government Polytechnic Nashik</td>
+                            <td>75.56%</td>
+                        </tr>
+                        <tr>
+                            <td>Secondary School Certificate</td>
+                            <td>Purushottam English School</td>
+                            <td>82.73%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="skills section">
+                <h2>Skills:</h2>
+                <button class="accordion">Programming Languages</button>
+                <div class="panel">
+                    <ul>
+                        <li>C Programming</li>
+                        <li>C++ Programming</li>
+                        <li>Java Programming</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Web Frameworks</button>
+                <div class="panel">
+                    <ul>
+                        <li>SpringMVC 5</li>
+                        <li>SpringBoot 3</li>
+                        <li>Angular 7</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Databases</button>
+                <div class="panel">
+                    <ul>
+                        <li>SQL (MySQL) 8</li>
+                        <li>NoSQL (MongoDB)</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">IDE & Tools</button>
+                <div class="panel">
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Eclipse</li>
+                        <li>STS4</li>
+                        <li>MongoChef</li>
+                        <li>MongoCompass</li>
+                        <li>MS SQL</li>
+                        <li>SQL Yog</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Web Servers</button>
+                <div class="panel">
+                    <ul>
+                        <li>Apache Tomcat 7, 9</li>
+                        <li>WebSphere 8</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Version Control</button>
+                <div class="panel">
+                    <ul>
+                        <li>GIT</li>
+                        <li>SVN</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Testing Libraries</button>
+                <div class="panel">
+                    <ul>
+                        <li>Unit testing</li>
+                        <li>Mockito testing</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Frontend Technologies</button>
+                <div class="panel">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>jQuery</li>
+                        <li>AngularJS</li>
+                        <li>JSTL</li>
+                        <li>Bootstrap</li>
+                        <li>Material Design</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Methodologies</button>
+                <div class="panel">
+                    <ul>
+                        <li>Agile</li>
+                        <li>Moscow</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Tools</button>
+                <div class="panel">
+                    <ul>
+                        <li>JIRA</li>
+                        <li>SourceTree</li>
+                        <li>BitBucket</li>
+                        <li>Jenkins</li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="header-left">
+                    <h1>Vishal Bhoi <i class="fas fa-check-circle"></i></h1>
+                    <p>Innovative developer with 3 years of hands-on experience crafting scalable Java applications using Spring MVC and Hibernate. Proficient in client-side scripting (jQuery, JavaScript) and web languages (HTML5, CSS3, Bootstrap).</p>
+                </div>
+                <div class="header-right">
+                    <button class="highlight">Follow</button>
+                </div>
+            </header>
+            <section class="section">
+                <h2>Professional Summary</h2>
+                <p>Innovative developer with 3 years of hands-on experience crafting scalable Java applications using Spring MVC and Hibernate. Proficient in client-side scripting (jQuery, JavaScript) and web languages (HTML5, CSS3, Bootstrap).</p>
+            </section>
+            <section class="experience section">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3><i class="fas fa-play-circle icon-play"></i> Maharashtra Knowledge Corporation Ltd.</h3>
+                    <h4>Senior Project Associate <span class="highlight">July 2022 – Present</span></h4>
+                    <h5>Project 1: Online Evaluation System (OES Framework)</h5>
+                    <p>Technology: Java, Spring MVC, Spring Boot, MySQL, Hibernate, JDBC, JSP, HTML, JavaScript, jQuery</p>
+                    <p>Led the development of the OES framework, a comprehensive web platform for both online and offline exams, supporting solo and group assessments. Managed multiple sub-projects within OES:</p>
+                    <ul>
+                        <li>Test Administrator: Server for exam data preparation and configuration.</li>
+                        <li>Analytical Dashboard & Reports: Graphical representation of exam data.</li>
+                        <li>Live Test Monitor: Real-time tracking of exam data.</li>
+                        <li>Grievance: Platform for raising and resolving grievances.</li>
+                        <li>Result Processing: Processing of uploaded exam data.</li>
+                    </ul>
+                    <h5>Project 2: Online Evaluation System (OES) Exam Client</h5>
+                    <p>Technology: Java, J2EE, Spring MVC, MySQL, JDBC, JSP, HTML, JavaScript, jQuery</p>
+                    <p>Key contributor to the OES Client, the primary exam platform supporting both quasi-online and fully online assessments. Integrated functionalities for certificate generation, report creation, and exam log maintenance.</p>
+                    <ul>
+                        <li>Led the initial design phase, creating Use Case and Class Diagrams.</li>
+                        <li>Developed the web application using Java, Spring MVC, and Hibernate.</li>
+                        <li>Crafted the UI using JSP, HTML, and Bootstrap CSS.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3><i class="fas fa-play-circle icon-play"></i> Cognizant Solutions India Ltd.</h3>
+                    <h4>Project Associate <span class="highlight">Nov 2020 – Jan 2022</span></h4>
+                    <h5>Project: Hongkong and Shanghai Banking Corporation Limited (HSBC)</h5>
+                    <p>Technology: Java, Spring MVC, Spring Boot, MySQL, Hibernate, JDBC, JSP, HTML, JavaScript, jQuery</p>
+                    <p>Worked on a banking web application project, modifying, and adding functionalities as per client requirements using CI/CD practices.</p>
+                    <ul>
+                        <li>Developed and enhanced functionalities to support various banking transactions.</li>
+                        <li>Followed Agile methodology and defined process frameworks for efficient project lifecycle management.</li>
+                        <li>Planned and executed daily operations critical to business success.</li>
+                        <li>Ensured timely delivery and maintained high quality of deliverables.</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section">
+                <h2>ACADEMIC PROJECTS</h2>
+                <h3><i class="fas fa-project-diagram icon-play"></i> Vending Machine (Java)</h3>
+                <p>The Vending Machine Management System, developed using Java Spring Boot and Hibernate, replicates the operations of a vending machine. Users can select products, make payments, and receive items.</p>
+                <h3><i class="fas fa-project-diagram icon-play"></i> ATM Management System (Java)</h3>
+                <p>ATM Management System, built with Java SpringBoot and Hibernate, simulates the functionalities of an ATM Machine. It allows users to perform transactions such as withdrawals, deposits, balance inquiries, and fund transfers.</p>
+            </section>
+            <section class="section">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Re-organized something to make it work better.</li>
+                    <li>Identified a problem and solved it.</li>
+                    <li>Come up with a new idea that improved things.</li>
+                </ul>
+            </section>
+            <section class="section personal-info">
+                <h2>Personal Information</h2>
+                <ul>
+                    <li><strong>Date of Birth:</strong> 7th May 1997</li>
+                    <li><strong>Father's Name:</strong> Mr. Gopal M. Bhoi</li>
+                    <li><strong>Marital Status:</strong> Married</li>
+                    <li><strong>Nationality:</strong> Indian</li>
+                </ul>
+            </section>
+            <div class="media-controls">
+                <div class="seekbar">
+                    <div></div>
+                </div>
+                <div class="buttons">
+                    <button><i class="fas fa-backward"></i></button>
+                    <button><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-forward"></i></button>
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <!-- <div class="volume-control">
+                    <i class="fas fa-volume-up"></i>
+                    <div class="volume-slider">
+                        <div></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
