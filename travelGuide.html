@@ -1,258 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahabaleshwar: Strawberry Hills Travel Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <style>
-
         :root {
-    --color-primary: #2c7873;
-    --color-secondary: #6fb98f;
-    --color-accent: #ff6b6b;
-    --color-background: #e0f0e3;
-    --color-text: #2d3436;
-    --color-card: #ffffff;
-    --color-overlay: rgba(44, 120, 115, 0.7);
-}
+            --color-primary: #2c7873;
+            --color-secondary: #6fb98f;
+            --color-accent: #ff6b6b;
+            --color-background: #e0f0e3;
+            --color-text: #2d3436;
+            --color-card: #ffffff;
+            --color-overlay: rgba(44, 120, 115, 0.7);
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: var(--color-text);
-    background-color: var(--color-background);
-    background-image: linear-gradient(to bottom, #e0f0e3, #c7e5d6);
-    background-attachment: fixed;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            background-image: linear-gradient(to bottom, #e0f0e3, #c7e5d6);
+            background-attachment: fixed;
+        }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-header {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+        header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    flex-wrap: wrap;
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+        }
 
-nav ul li {
-    margin: 0.5rem;
-}
+        nav ul li {
+            margin: 0.5rem;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    display: inline-block;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
 
-nav ul li a:hover {
-    background-color: var(--color-accent);
-    color: white;
-}
+        nav ul li a:hover {
+            background-color: var(--color-accent);
+            color: white;
+        }
 
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
-    text-align: center;
-}
+        h1,
+        h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
 
-h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    padding: 2rem 0;
-    color: var(--color-primary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            padding: 2rem 0;
+            color: var(--color-primary);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: var(--color-secondary);
-    border-bottom: 2px solid var(--color-secondary);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--color-secondary);
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
 
-.card {
-    background-color: var(--color-card);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
+        .card {
+            background-color: var(--color-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
 
-.card:hover img {
-    transform: scale(1.1);
-}
+        .card:hover img {
+            transform: scale(1.1);
+        }
 
-.card-content {
-    padding: 1.5rem;
-}
+        .card-content {
+            padding: 1.5rem;
+        }
 
-.card h3 {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    margin-bottom: 0.5rem;
-    color: var(--color-primary);
-}
+        .card h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
 
-.card p {
-    margin-bottom: 1rem;
-    color: var(--color-text);
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
+        .card p {
+            margin-bottom: 1rem;
+            color: var(--color-text);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
 
-.btn {
-    display: inline-block;
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-}
+        .btn {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+        }
 
-.btn:hover {
-    background-color: var(--color-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+        .btn:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.section-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    font-style: italic;
-    color: var(--color-text);
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+            color: var(--color-text);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(44,120,115,0) 0%, var(--color-overlay) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(44, 120, 115, 0) 0%, var(--color-overlay) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.card:hover::before {
-    opacity: 1;
-}
+        .card:hover::before {
+            opacity: 1;
+        }
 
-.elevation {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: var(--color-accent);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-    font-weight: bold;
-}
+        .elevation {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+            font-weight: bold;
+        }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    nav ul li {
-        margin: 0.3rem 0;
-    }
+            nav ul li {
+                margin: 0.3rem 0;
+            }
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-    .card img {
-        height: 180px;
-    }
+            .card img {
+                height: 180px;
+            }
 
-    .card-content {
-        padding: 1rem;
-    }
+            .card-content {
+                padding: 1rem;
+            }
 
-    .btn {
-        display: block;
-        text-align: center;
-    }
-}
+            .btn {
+                display: block;
+                text-align: center;
+            }
+        }
 
-@media (max-width: 480px) {
-    h1 {
-        padding: 1.5rem 0;
-    }
+        @media (max-width: 480px) {
+            h1 {
+                padding: 1.5rem 0;
+            }
 
-    h2 {
-        margin-bottom: 1rem;
-    }
+            h2 {
+                margin-bottom: 1rem;
+            }
 
-    .section-intro {
-        margin-bottom: 1.5rem;
-    }
+            .section-intro {
+                margin-bottom: 1.5rem;
+            }
 
-    .card img {
-        height: 150px;
-    }
-}
-        
+            .card img {
+                height: 150px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -270,133 +273,189 @@ h2 {
 
         <section id="viewpoints">
             <h2>Scenic Viewpoints</h2>
-            <p class="section-intro">Explore breathtaking vistas that showcase the natural beauty of Mahabaleshwar's rolling hills and deep valleys.</p>
+            <p class="section-intro">Explore breathtaking vistas that showcase the natural beauty of Mahabaleshwar's
+                rolling hills and deep valleys.</p>
             <div class="grid">
+
                 <!-- New Scenic Viewpoints -->
                 <div class="card">
-                    <img src="https://d3gw4aml0lneeh.cloudfront.net/assets/locations/U3NXTYO9JFkc.jpg?height=250&width=400" alt="Venna Lake">
-                    <div class="card-content">
-                        <h3>Venna Lake</h3>
-                        <p>A serene lake offering boat rides and surrounded by lush greenery, perfect for family outings and romantic evenings.</p>
-                        <a href="https://maps.app.goo.gl/WgBtvcwFerAyYw8i6" class="btn">Plan Your Visit</a>
-                    </div>
-                  
-                </div>
-        
-                <div class="card">
-                    <img src="https://eindiatourism.in/wp-content/uploads/2023/05/Mahabaleshwar-Temple2.jpg?height=250&width=400" alt="Mahabaleshwar Temple">
-                    <div class="card-content">
-                        <h3>Mahabaleshwar Temple</h3>
-                        <p>An ancient temple dedicated to Lord Shiva, known for its rich history and beautiful architecture.</p>
-                        <a href="https://maps.app.goo.gl/xJC98EHCaQ9EhYgcA" class="btn">Explore Temple</a>
-                    </div>
-                  
-                </div>
-        
-                <div class="card">
-                    <img src="https://mahabaleshwartourism.in/images/places-to-visit/headers/krishnabai-temple-mahabaleshwar-tourism-entry-fee-timings-holidays-reviews-header.jpg?height=250&width=400" alt="Krushnabai Temple">
-                    <div class="card-content">
-                        <h3>Krushnabai Temple</h3>
-                        <p>Offers panoramic views and houses the origin of the Krishna River, a tranquil spot for visitors seeking peace.</p>
-                        <a href="https://maps.app.goo.gl/wygRXt6RVAUjC9ic6" class="btn">Discover More</a>
-                    </div>
-                   
-                </div>
-        
-                <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT0nAqn6ea_bN4uUfOmEsykPADubDbty9g3QfQPDqSYxK_QbpsuTfZLs5BMnJFofRsWQ&usqp=CAU?height=250&width=400" alt="Vintage Miles">
-                    <div class="card-content">
-                        <h3>Vintage Miles</h3>
-                        <p>A unique vintage car museum and restaurant offering a nostalgic experience for automobile enthusiasts.</p>
-                        <a href="https://maps.app.goo.gl/XGBvxd2JtkmLUc4SA" class="btn">Visit Now</a>
-                    </div>
-                  
-                </div>
-        
-                <div class="card">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fa/79/bd/lingamala-falls.jpg?height=250&width=400" alt="Lingmala Waterfall">
-                    <div class="card-content">
-                        <h3>Lingmala Waterfall</h3>
-                        <p>A picturesque waterfall cascading from a height of 600 feet, perfect for nature lovers and photographers.</p>
-                        <a href="https://maps.app.goo.gl/zKKw9Dx3oeHsqbH1A" class="btn">View Waterfall</a>
-                    </div>
-                  
+                    <a href="https://maps.app.goo.gl/WgBtvcwFerAyYw8i6" target="_blank">
+                        <img src="https://d3gw4aml0lneeh.cloudfront.net/assets/locations/U3NXTYO9JFkc.jpg?height=250&width=400"
+                            alt="Venna Lake">
+                        <div class="card-content">
+                            <h3>Venna Lake</h3>
+                            <p>A serene lake offering boat rides and surrounded by lush greenery, perfect for family
+                                outings and romantic evenings.</p>
+
+                            <a href="#" class="btn">Plan Your Visit</a>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <img src="https://www.trawell.in/admin/images/upload/162482708Mahabaleshwar_Arthur_%20Seat_Point_Main.jpg?height=250&width=400" alt="Arthur's Seat">
-                    <div class="card-content">
-                        <h3>Arthur's Seat</h3>
-                        <p>The most famous viewpoint offering a stunning 360-degree view of the Sahyadri range and Konkan coast.</p>
-                        <a href="https://maps.app.goo.gl/5Wv5KKzFE7iaGUWq7" class="btn">View on Map</a>
-                    </div>
-                   
-                </div>
-        
-                <div class="card">
-                    <img src="https://i.ytimg.com/vi/CY97dIGb_Tw/maxresdefault.jpg?height=250&width=400" alt="Wilson Point">
-                    <div class="card-content">
-                        <h3>Wilson Point</h3>
-                        <p>The highest point in Mahabaleshwar, perfect for catching breathtaking sunrises and sunsets.</p>
-                        <a href="https://maps.app.goo.gl/a6yatM8dG5tJr4Si7" class="btn">View on Map</a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/xJC98EHCaQ9EhYgcA" target="_blank">
+                        <img src="https://eindiatourism.in/wp-content/uploads/2023/05/Mahabaleshwar-Temple2.jpg?height=250&width=400"
+                            alt="Mahabaleshwar Temple">
+                        <div class="card-content">
+                            <h3>Mahabaleshwar Temple</h3>
+                            <p>An ancient temple dedicated to Lord Shiva, known for its rich history and beautiful
+                                architecture.</p>
 
-                </div>
-        
-                <div class="card">
-                    <img src="https://images.jdmagicbox.com/comp/mahabaleshwar/t4/9999p2168.2168.230325135137.y1t4/catalogue/salman-travels-mahabaleshwar-bus-stand-mahabaleshwar-car-rental-9d6yh56a57.jpg?height=250&width=400" alt="Elephant's Head Point">
-                    <div class="card-content">
-                        <h3>Elephant's Head Point</h3>
-                        <p>A dramatic cliff resembling an elephant's head, offering panoramic views of the Sahyadri mountains.</p>
-                        <a href="https://maps.app.goo.gl/4b5ZbVdpXVW8EAZu7" class="btn">View on Map</a>
-                    </div>
-                   
+                            <a href="#" class="btn">Explore Temple</a>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/pratapgarh-fort-mahabaleshwar-maharashtra-1-attr-hero?qlt=82&ts=1726668891652?height=250&width=400" alt="Pratapgad Fort">
+                    <a href="https://maps.app.goo.gl/wygRXt6RVAUjC9ic6" target="_blank">
+                        <img src="https://mahabaleshwartourism.in/images/places-to-visit/headers/krishnabai-temple-mahabaleshwar-tourism-entry-fee-timings-holidays-reviews-header.jpg?height=250&width=400"
+                            alt="Krushnabai Temple">
+                        <div class="card-content">
+                            <h3>Krushnabai Temple</h3>
+                            <p>Offers panoramic views and houses the origin of the Krishna River, a tranquil spot for
+                                visitors seeking peace.</p>
+
+                            <a href="#" class="btn">Discover More</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/XGBvxd2JtkmLUc4SA" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT0nAqn6ea_bN4uUfOmEsykPADubDbty9g3QfQPDqSYxK_QbpsuTfZLs5BMnJFofRsWQ&usqp=CAU?height=250&width=400"
+                            alt="Vintage Miles">
+                        <div class="card-content">
+                            <h3>Vintage Miles</h3>
+                            <p>A unique vintage car museum and restaurant offering a nostalgic experience for automobile
+                                enthusiasts.</p>
+
+                            <a href="#" class="btn">Visit Now</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/zKKw9Dx3oeHsqbH1A" target="_blank">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fa/79/bd/lingamala-falls.jpg?height=250&width=400"
+                            alt="Lingmala Waterfall">
+                        <div class="card-content">
+                            <h3>Lingmala Waterfall</h3>
+                            <p>A picturesque waterfall cascading from a height of 600 feet, perfect for nature lovers
+                                and photographers.</p>
+
+                            <a href="#" class="btn">View Waterfall</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/5Wv5KKzFE7iaGUWq7" target="_blank">
+                        <img src="https://www.trawell.in/admin/images/upload/162482708Mahabaleshwar_Arthur_%20Seat_Point_Main.jpg?height=250&width=400"
+                            alt="Arthur's Seat">
+                        <div class="card-content">
+                            <h3>Arthur's Seat</h3>
+                            <p>The most famous viewpoint offering a stunning 360-degree view of the Sahyadri range and
+                                Konkan coast.</p>
+
+                            <a href="#" class="btn">View on Map</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/a6yatM8dG5tJr4Si7" target="_blank">
+                        <img src="https://i.ytimg.com/vi/CY97dIGb_Tw/maxresdefault.jpg?height=250&width=400"
+                            alt="Wilson Point">
+                        <div class="card-content">
+                            <h3>Wilson Point</h3>
+                            <p>The highest point in Mahabaleshwar, perfect for catching breathtaking sunrises and
+                                sunsets.</p>
+
+                            <a href="#" class="btn">View on Map</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/4b5ZbVdpXVW8EAZu7" target="_blank">
+                        <img src="https://images.jdmagicbox.com/comp/mahabaleshwar/t4/9999p2168.2168.230325135137.y1t4/catalogue/salman-travels-mahabaleshwar-bus-stand-mahabaleshwar-car-rental-9d6yh56a57.jpg?height=250&width=400"
+                            alt="Elephant's Head Point">
+                        <div class="card-content">
+                            <h3>Elephant's Head Point</h3>
+                            <p>A dramatic cliff resembling an elephant's head, offering panoramic views of the Sahyadri
+                                mountains.</p>
+
+                            class="btn">View on Map
+                    </a>
+                </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://maps.app.goo.gl/E6tpEoUX53RkFmUYA" target="_blank">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/pratapgarh-fort-mahabaleshwar-maharashtra-1-attr-hero?qlt=82&ts=1726668891652?height=250&width=400"
+                        alt="Pratapgad Fort">
                     <div class="card-content">
                         <h3>Pratapgad Fort</h3>
-                        <p>A historic fort built by Chhatrapati Shivaji Maharaj, offering stunning views and a rich history to explore.</p>
-                        <a href="https://maps.app.goo.gl/E6tpEoUX53RkFmUYA" class="btn">Visit Fort</a>
+                        <p>A historic fort built by Chhatrapati Shivaji Maharaj, offering stunning views and a rich
+                            history to explore.</p>
+
+                        <a href="#" class="btn">Visit Fort</a>
                     </div>
-                  
-                </div>
+                </a>
+            </div>
             </div>
         </section>
-        
+
 
         <section id="farms">
             <h2>More tourist attractions</h2>
-            <p class="section-intro">Visit Mahabaleshwar's famous strawberry farms, where you can pick fresh strawberries and enjoy delicious treats.</p>
+            <p class="section-intro">Visit Mahabaleshwar's famous strawberry farms, where you can pick fresh
+                strawberries and enjoy delicious treats.</p>
             <div class="grid">
+
                 <div class="card">
-                    <img src="https://www.shutterstock.com/image-photo/mapro-garden-panchgani-mahabaleshwar-600w-1710067663.jpg?height=250&width=400" alt="Mapro Garden">
-                    <div class="card-content">
-                        <h3>Mapro Garden</h3>
-                        <p>Popular tourist spot with strawberry farms, food court, and chocolate factory. Try their famous strawberry cream!</p>
-                        <a href="https://maps.app.goo.gl/qJgwmgw2goCMJW5s5" class="btn">Visit</a>
-                    </div>
-                   
+                    <a href="https://maps.app.goo.gl/qJgwmgw2goCMJW5s5" target="_blank">
+                        <img src="https://www.shutterstock.com/image-photo/mapro-garden-panchgani-mahabaleshwar-600w-1710067663.jpg?height=250&width=400"
+                            alt="Mapro Garden">
+                        <div class="card-content">
+                            <h3>Mapro Garden</h3>
+                            <p>Popular tourist spot with strawberry farms, food court, and chocolate factory. Try their
+                                famous strawberry cream!</p>
+                            <a href="#" class="btn">Visit</a>
+                        </div>
+                    </a>
                 </div>
-                <div class="card">
-                    <img src="https://i.ytimg.com/vi/9Z9RAeQOMzo/maxresdefault.jpg?height=250&width=400" alt="Hollywood Wax Museum & Aquarium">
+            </div>
+
+            <div class="card">
+                <a href="https://maps.app.goo.gl/xmV3Rf8bhXXeqe966" target="_blank">
+                    <img src="https://i.ytimg.com/vi/9Z9RAeQOMzo/maxresdefault.jpg?height=250&width=400"
+                        alt="Hollywood Wax Museum & Aquarium">
                     <div class="card-content">
                         <h3>Hollywood Wax Museum & Aquarium</h3>
                         <p>Small wax museum featuring statues of celebrities, politicians & sports figures.</p>
-                        <a href="https://maps.app.goo.gl/xmV3Rf8bhXXeqe966" class="btn">Visit</a>
+
+                        <a href="#" class="btn">Visit</a>
                     </div>
-                  
-                </div>
-                <div class="card">
-                    <img src="https://i.ytimg.com/vi/5bK5eXGRdp8/hq720.jpg?height=250&width=400" alt="Funtown amusement park">
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://maps.app.goo.gl/xHv5TUj3psLZqLsQ8" target="_blank">
+                    <img src="https://i.ytimg.com/vi/5bK5eXGRdp8/hq720.jpg?height=250&width=400"
+                        alt="Funtown amusement park">
                     <div class="card-content">
                         <h3>Funtown amusement park</h3>
-                        <p>Funtown amusement park is located across from Mapra Garden Panchgani. This is the finest spot for having fun with family and friends.</p>
-                        <a href="https://maps.app.goo.gl/xHv5TUj3psLZqLsQ8" class="btn">Visit</a>
+                        <p>Funtown amusement park is located across from Mapra Garden Panchgani. This is the finest spot
+                            for having fun with family and friends.</p>
+
+                        <a href="#" class="btn">Visit</a>
                     </div>
-                  
-                </div>
+                </a>
+            </div>
+            </div>
+
             </div>
         </section>
 
@@ -404,92 +463,127 @@ h2 {
             <h2>Charming Stays</h2>
             <p class="section-intro"></p>
             <div class="grid">
+
                 <div class="card">
-                    <img src="https://www.historywithtravel.com/images/Mahabaleshwar/mahabaleshwar-market.jpg?height=250&width=400" alt="market">
-                    <div class="card-content">
-                        <h3>Main market Mahabaleshwar</h3>
-                        <p>The main market of Mahabaleshwar is a bustling hub filled with a wide variety of shops offering local goods, fresh produce, and souvenirs.</p>
-                        <a href="#" class="btn">Visit</a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/RMK79vF3GQ6Aupy87" target="_blank">
+                        <img src="https://www.historywithtravel.com/images/Mahabaleshwar/mahabaleshwar-market.jpg?height=250&width=400"
+                            alt="market">
+                        <div class="card-content">
+                            <h3>Main market Mahabaleshwar</h3>
+                            <p>The main market of Mahabaleshwar is a bustling hub filled with a wide variety of shops
+                                offering local goods, fresh produce, and souvenirs.</p>
+
+                            <a href="#" class="btn">Visit</a>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7b8Lv8RvwN1MLWwvj5LMD505MWiWH8V1Vuw&s?height=250&width=400" alt="market">
-                    <div class="card-content">
-                        <h3>Ginger Cafe Mahabaleshwar</h3>
-                        <p>If you’re looking for a place where you can relax and read some novels or whatever, this coffee shop would be the best.</p>
-                        <a href="https://maps.app.goo.gl/JRXcaZiP8dCqN7xi8" class="btn">Visit</a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/JRXcaZiP8dCqN7xi8" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7b8Lv8RvwN1MLWwvj5LMD505MWiWH8V1Vuw&s?height=250&width=400"
+                            alt="market">
+                        <div class="card-content">
+                            <h3>Ginger Cafe Mahabaleshwar</h3>
+                            <p>If you’re looking for a place where you can relax and read some novels or whatever, this
+                                coffee shop would be the best.</p>
+
+                            <a href="#" class="btn">Visit</a>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRlASZKBmbQiST813cQkOv4SCNQc-E997s71C8QvCA6ruLD2laKA54qhxIugtxMPAs6n4&usqp=CAU?height=250&width=400" alt="market">
-                    <div class="card-content">
-                        <h3>Pachgani Market: Hilltop Ice-Creams</h3>
-                        <p>The place has its unique charm, the service is wonderful... You can see them prepare your desserts... And the taste is heavenly.</p>
-                        <a href="https://maps.app.goo.gl/kYnrTdbCAoPq8R2DA" class="btn">Visit</a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/kYnrTdbCAoPq8R2DA" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRlASZKBmbQiST813cQkOv4SCNQc-E997s71C8QvCA6ruLD2laKA54qhxIugtxMPAs6n4&usqp=CAU?height=250&width=400"
+                            alt="market">
+                        <div class="card-content">
+                            <h3>Pachgani Market: Hilltop Ice-Creams</h3>
+                            <p>The place has its unique charm, the service is wonderful... You can see them prepare your
+                                desserts... And the taste is heavenly.</p>
+
+                            <a href="#" class="btn">Visit</a>
+                        </div>
+                    </a>
                 </div>
-        
+
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68bm2O8NrQNbQBY_Z1VLlY_U1ST8ieeVwXg&s?height=250&width=400" alt="market">
-                    <div class="card-content">
-                        <h3>Pachgani Market: Lucky Cafe</h3>
-                        <p>For Breakfast, Lucky Cafe and Bakery in Panchgani is a charming spot that transports you back in time with its delightful retro vibe.</p>
-                        <a href="https://maps.app.goo.gl/SpkdprYBHf12QQQTA" class="btn">Visit</a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/SpkdprYBHf12QQQTA" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68bm2O8NrQNbQBY_Z1VLlY_U1ST8ieeVwXg&s?height=250&width=400"
+                            alt="market">
+                        <div class="card-content">
+                            <h3>Pachgani Market: Lucky Cafe</h3>
+                            <p>For Breakfast, Lucky Cafe and Bakery in Panchgani is a charming spot that transports you
+                                back in time with its delightful retro vibe.</p>
+
+                            <a href="#" class="btn">Visit</a>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section id="stays">
             <h2>Charming Stays</h2>
-            <p class="section-intro">Discover cozy retreats nestled in the lush green hills of Mahabaleshwar, offering stunning views and a perfect escape from the city hustle.</p>
+            <p class="section-intro">Discover cozy retreats nestled in the lush green hills of Mahabaleshwar, offering
+                stunning views and a perfect escape from the city hustle.</p>
             <div class="grid">
                 <!-- Existing Resort Cards -->
-        
+
                 <!-- New Resort Card 1: Valleywood -->
                 <div class="card">
-                    <img src="https://r1imghtlak.mmtcdn.com/14ab4a241bb811e891fd0224510f5e5b.jpg?height=250&width=400" alt="Valleywood">
-                    <div class="card-content">
-                        <h3>Valleywood</h3>
-                        <p>2-star hotel offering easy access to nearby attractions and 24-hour service.</p>
-                        <p><strong>Location:</strong> Village Metgutad, Mahabaleshwar Pachgani Road</p>
-                        <p><strong>Phone:</strong> 083909 32344</p>
-                        <a href="#" class="btn">Check Availability</a>
-                    </div>
-                    <div class="elevation">Open 24 Hours</div>
+                    <a href="https://maps.app.goo.gl/VChYC2jBQRXAeyKH6" target="_blank">
+                        <img src="https://r1imghtlak.mmtcdn.com/14ab4a241bb811e891fd0224510f5e5b.jpg?height=250&width=400"
+                            alt="Valleywood">
+                        <div class="card-content">
+                            <h3>Valleywood</h3>
+                            <p>2-star hotel offering easy access to nearby attractions and 24-hour service.</p>
+                            <p><strong>Location:</strong> Village Metgutad, Mahabaleshwar Pachgani Road</p>
+                            <p><strong>Phone:</strong> 083909 32344</p>
+
+                            <a href="#" class="btn">Check Availability</a>
+                        </div>
+                        <div class="elevation">Open 24 Hours</div>
+                    </a>
                 </div>
-        
+
                 <!-- New Resort Card 2: Nisha Hotel -->
                 <div class="card">
-                    <img src="https://r1imghtlak.mmtcdn.com/1f9dbe44-755b-437c-8108-7d7e85578711.jpg?height=250&width=400" alt="Nisha Hotel">
-                    <div class="card-content">
-                        <h3>Nisha Hotel</h3>
-                        <p>Hotel known for excellent views, proximity to scenic attractions in Mahabaleshwar.</p>
-                        <p><strong>Location:</strong> Panchgani - Mahabaleshwar Rd, Metgutad</p>
-                        <p><strong>Phone:</strong> 070200 00937</p>
-                        <a href="#" class="btn">Check Availability</a>
-                    </div>
-                    <div class="elevation">Open 24 Hours</div>
+                    <a href="https://maps.app.goo.gl/CbEgdr33fEFBVdrc9" target="_blank">
+                        <img src="https://r1imghtlak.mmtcdn.com/1f9dbe44-755b-437c-8108-7d7e85578711.jpg?height=250&width=400"
+                            alt="Nisha Hotel">
+                        <div class="card-content">
+                            <h3>Nisha Hotel</h3>
+                            <p>Hotel known for excellent views, proximity to scenic attractions in Mahabaleshwar.</p>
+                            <p><strong>Location:</strong> Panchgani - Mahabaleshwar Rd, Metgutad</p>
+                            <p><strong>Phone:</strong> 070200 00937</p>
+
+                            <a href="#" class="btn">Check Availability</a>
+                        </div>
+                        <div class="elevation">Open 24 Hours</div>
+                    </a>
                 </div>
-        
+
                 <!-- New Resort Card 3: Bliss County -->
                 <div class="card">
-                    <img src="https://r1imghtlak.mmtcdn.com/b49233307ee711ed87470a58a9feac02.jpg?height=250&width=400" alt="Bliss County">
-                    <div class="card-content">
-                        <h3>Bliss County</h3>
-                        <p>Resort hotel with luxurious amenities, a peaceful environment.</p>
-                        <p><strong>Location:</strong> Village Nakinda, Old Mahabaleshwar Rd, Avakali</p>
-                        <p><strong>Phone:</strong> 074984 17771</p>
-                        <a href="#" class="btn">Check Availability</a>
-                    </div>
-                    <div class="elevation">Open 24 Hours</div>
+                    <a href="https://maps.app.goo.gl/C6jyBJuM3thNuYhg7" target="_blank">
+
+                        <img src="https://r1imghtlak.mmtcdn.com/b49233307ee711ed87470a58a9feac02.jpg?height=250&width=400"
+                            alt="Bliss County">
+                        <div class="card-content">
+                            <h3>Bliss County</h3>
+                            <p>Resort hotel with luxurious amenities, a peaceful environment.</p>
+                            <p><strong>Location:</strong> Village Nakinda, Old Mahabaleshwar Rd, Avakali</p>
+                            <p><strong>Phone:</strong> 074984 17771</p>
+                            <a href="#" class="btn">Check Availability</a>
+                        </div>
+                        <div class="elevation">Open 24 Hours</div>
+                    </a>
                 </div>
+
             </div>
-        </section> 
+        </section>
 
     </main>
 </body>
-</html>
 
+</html>
